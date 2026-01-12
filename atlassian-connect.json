@@ -2,7 +2,7 @@
     "key": "com.riadalabs.jira.plugins.notificationassistant",
     "name": "NotAtlas",
     "description": "Jira connection",
-    "baseUrl": "https://96874b449711.ngrok-free.app",
+    "baseUrl": "https://895e1f8b61f9.ngrok-free.app",
     "version": "1.0.0",
     "authentication": {
         "type": "jwt"
