@@ -1,117 +1,133 @@
 {
-    "key": "com.riadalabs.jira.plugins.notificationassistant",
-    "name": "NotAtlas",
-    "description": "Jira connection",
-    "baseUrl": "https://895e1f8b61f9.ngrok-free.app",
-    "version": "1.0.0",
-    "authentication": {
-        "type": "jwt"
-    },
-    "lifecycle": {
-        "installed": "/jira/ingestion-marketplace-install",
-        "uninstalled": "/jira/ingestion-uninstall"
-    },
-    "scopes": [
-        "READ",
-        "ACT_AS_USER",
-        "ADMIN",
-        "ACCESS_EMAIL_ADDRESSES"
-    ],
-    "modules": {
-        "generalPages": [
-            {
-                "url": "/helloworld.html",
-                "key": "hello-world",
-                "location": "system.top.navigation.bar",
-                "name": {
-                    "value": "Greeting"
-                }
-            }
-        ],
-        "postInstallPage": {
-            "url": "/post-setup",
-            "name": {
-                "value": "Complete Setup"
-            },
-            "key": "post-setup-key"
-        },
-        "webhooks": [
-            {
-                "event": "app-installed-webhook",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "jira:issue_created",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "jira:issue_updated",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "jira:issue_deleted",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "comment_created",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "comment_updated",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "comment_deleted",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "project_created",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "project_updated",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "project_deleted",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "project_soft_deleted",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "issuelink_created",
-                "url": "https://48fa-14-195-14-78.ngrok-free.app/webhooks/issue-created?site={local_base_url}&clientKey={project.id}"
-            },
-            {
-                "event": "issuelink_deleted",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "user_created",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "user_updated",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "user_deleted",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "board_created",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "board_updated",
-                "url": "/jira/ingestion-webhook"
-            },
-            {
-                "event": "board_deleted",
-                "url": "/jira/ingestion-webhook"
-            }
-        ]
-    }
+  "key": "com.riadalabs.jira.plugins.notificationassistant",
+  "name": "NotionAI-Local-Original",
+  "description": "Jira connection Local NotionAI.",
+  "baseUrl": "https://895e1f8b61f9.ngrok-free.app",
+  "version": "1.0.0",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/jira/ingestion-marketplace-install",
+    "uninstalled": "/jira/ingestion-uninstall",
+    "disabled": "/jira/ingestion-marketplace-disabled",
+    "enabled": "/jira/ingestion-marketplace-enabled"
+  },
+  "scopes": [
+    "READ",
+    "ADMIN",
+    "ACCESS_EMAIL_ADDRESSES",
+    "ACT_AS_USER"
+  ],
+  "modules": {
+    "webhooks": [
+      {
+        "event": "jira:issue_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "jira:issue_updated",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "jira:issue_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "issue_property_set",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "issue_property_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "comment_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "comment_updated",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "comment_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_updated",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_soft_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_restored_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_archived",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "project_restored_archived",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "issuelink_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "issuelink_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "filter_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "filter_updated",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "filter_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "user_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "user_updated",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "user_deleted",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "board_created",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "board_updated",
+        "url": "/jira/ingestion-webhook"
+      },
+      {
+        "event": "board_deleted",
+        "url": "/jira/ingestion-webhook"
+      }
+    ]
+  },
+  "apiMigrations": {
+     "signed-install": true
+  }
 }
